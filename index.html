@@ -1,0 +1,496 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMED Pharmacy | Your Trusted Healthcare Partner</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+    <div class="background-overlay"></div>
+
+    <header>
+        <div class="logo-container">
+            <div class="logo">
+                <i class="fas fa-clinic-medical"></i>
+                SIMED PHARMACY
+            </div>
+        </div>
+        
+        <nav>
+            <ul class="nav-menu">
+                <li>
+                    <a href="#home">Home</a>
+                </li>
+                <li>
+                    <a href="#catalogue">Catalogue <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <div class="dropdown-columns">
+                            <div class="dropdown-column">
+                                <h4>HEALTH BAR</h4>
+                                <ul>
+                                    <li><a href="#">Universal</a></li>
+                                    <li><a href="#">Muscle Junkie</a></li>
+                                    <li><a href="#">Weight Management</a></li>
+                                    <li><a href="#">Healthy Foods</a></li>
+                                    <li><a href="#">FORTUNA</a></li>
+                                    <li><a href="#">REHABILITATION</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4>BABY BAR</h4>
+                                <ul>
+                                    <li><a href="#">Tommee Tippee</a></li>
+                                    <li><a href="#">Avent</a></li>
+                                    <li><a href="#">Nuby</a></li>
+                                    <li><a href="#">Nuk</a></li>
+                                    <li><a href="#">Toys</a></li>
+                                    <li><a href="#">For Mom</a></li>
+                                    <li><a href="#">Diapers & Wipes</a></li>
+                                    <li><a href="#">Food & Formula</a></li>
+                                    <li><a href="#">Baby Skin Care</a></li>
+                                    <li><a href="#">Baby Wear</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4>BEAUTY BAR</h4>
+                                <ul>
+                                    <li><a href="#">Gift-sets</a></li>
+                                    <li><a href="#">Cosmetic Cases/Bags</a></li>
+                                    <li><a href="#">General Beauty Bar</a></li>
+                                    <li><a href="#">Make-up</a></li>
+                                    <li><a href="#">Zaron</a></li>
+                                    <li><a href="#">Black Opal</a></li>
+                                    <li><a href="#">Revlon</a></li>
+                                    <li><a href="#">Neutrogena</a></li>
+                                    <li><a href="#">Ponds & Dermafix</a></li>
+                                    <li><a href="#">Cetaphil & Celltone</a></li>
+                                    <li><a href="#">The Ordinary/Lanbena</a></li>
+                                    <li><a href="#">DR RASHEL</a></li>
+                                    <li><a href="#">Rooibos</a></li>
+                                    <li><a href="#">Portia M</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4>PERSONAL CARE</h4>
+                                <ul>
+                                    <li><a href="#">Bath Care</a></li>
+                                    <li><a href="#">Eye Care</a></li>
+                                    <li><a href="#">Body Care</a></li>
+                                    <li><a href="#">Lip Care</a></li>
+                                    <li><a href="#">Oral Hygiene</a></li>
+                                    <li><a href="#">Hand & Foot Care</a></li>
+                                    <li><a href="#">Sunscreens</a></li>
+                                    <li><a href="#">Sanitary</a></li>
+                                    <li><a href="#">Ear care</a></li>
+                                </ul>
+                            </div>
+                            <div class="dropdown-column">
+                                <h4>OTHER CATEGORIES</h4>
+                                <ul>
+                                    <li><a href="#">FRAGRANCES</a></li>
+                                    <li><a href="#">MEN'S GROOMING</a></li>
+                                    <li><a href="#">OVER THE COUNTER</a></li>
+                                    <li><a href="#">Food & Services</a></li>
+                                    <!-- Added OTC items -->
+                                    <li><a href="#">Baby Oil</a></li>
+                                    <li><a href="#">Cotton</a></li>
+                                    <li><a href="#">Holy Oil</a></li>
+                                    <li><a href="#">Coconut Oil</a></li>
+                                    <li><a href="#">Olive Oil</a></li>
+                                    <li><a href="#">OTC Drugs</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#services">Services <i class="fas fa-chevron-down"></i></a>
+                    <div class="dropdown">
+                        <div class="dropdown-column">
+                            <h4>FOOD & SERVICES</h4>
+                            <ul>
+                                <li><a href="#">Deliveries</a></li>
+                                <li><a href="#">Pack my parcel</a></li>
+                                <li><a href="#">Share the warmth</a></li>
+                                <li><a href="#">Piercing</a></li>
+                                <li><a href="#">Body Mass Index</a></li>
+                                <li><a href="#">Prescription</a></li>
+                                <li><a href="#">Medical Aids Accepted</a></li>
+                                <!-- Removed The Booties Black Card -->
+                                <li><a href="#">Front Shop</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#prescription">Prescription</a>
+                </li>
+                <li>
+                    <a href="#appointments">Appointments</a>
+                </li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
+            </ul>
+            
+            <div class="cta-buttons">
+                <a href="#appointments" class="cta-button">
+                    <i class="fas fa-calendar-check"></i> SIMED Appointments
+                </a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <h1>Your Health is Our Priority</h1>
+                <p>SIMED Pharmacy provides comprehensive pharmaceutical services, health products, and personalized care to support your wellness journey.</p>
+                <div class="hero-buttons">
+                    <a href="#prescription" class="cta-button">
+                        <i class="fas fa-prescription"></i> Upload Prescription
+                    </a>
+                    <a href="#appointments" class="cta-button accent">
+                        <i class="fas fa-calendar-alt"></i> Book Appointment
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Prescription Section -->
+        <section id="prescription">
+            <div class="section-header">
+                <h2>Prescription Service</h2>
+                <p>Upload your prescription and we'll prepare your medication for pickup or delivery</p>
+            </div>
+            
+            <div class="card prescription-form">
+                <form id="prescriptionForm">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fullName">Full Name *</label>
+                            <input type="text" id="fullName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number *</label>
+                            <input type="tel" id="phone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="delivery">Delivery Preference</label>
+                            <select id="delivery">
+                                <option value="pickup">Pickup at Pharmacy</option>
+                                <option value="delivery">Home Delivery</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="notes">Special Instructions</label>
+                        <textarea id="notes" placeholder="Any special instructions or notes for our pharmacists..."></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Upload Prescription (Image or PDF)</label>
+                        <div class="file-upload" id="fileUpload">
+                            <i class="fas fa-file-upload"></i>
+                            <p>Click to upload your prescription</p>
+                            <input type="file" id="prescriptionFile" accept="image/*,.pdf" style="display: none;">
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="cta-button">
+                        <i class="fas fa-paper-plane"></i> Send Prescription
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Services Section -->
+        <section id="services" style="background: rgba(13, 71, 161, 0.7);">
+            <div class="section-header">
+                <h2>Our Services</h2>
+                <p>Comprehensive healthcare services tailored to your needs</p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-prescription-bottle"></i>
+                    </div>
+                    <h3>Prescription Services</h3>
+                    <p>Fast and accurate prescription filling with pharmacist consultation.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3>Health Screenings</h3>
+                    <p>Blood pressure, cholesterol, diabetes and other health screenings.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-baby"></i>
+                    </div>
+                    <h3>Baby Care</h3>
+                    <p>Specialized products and advice for infant and child care.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Home Delivery</h3>
+                    <p>Convenient delivery of medications to your doorstep.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Pharmacist Consultation</h3>
+                    <p>Personalized advice from our experienced pharmacists.</p>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-pills"></i>
+                    </div>
+                    <h3>OTC Medications</h3>
+                    <p>Wide range of over-the-counter medicines and health products.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Appointments Section -->
+        <section id="appointments">
+            <div class="section-header">
+                <h2>Book an Appointment</h2>
+                <p>Schedule a consultation with our pharmacists or specialists</p>
+            </div>
+            
+            <div class="card" style="max-width: 700px; margin: 0 auto;">
+                <h3 style="text-align: center; margin-bottom: 2rem; color: var(--primary-color);">SIMED Pharmacy Appointments</h3>
+                <form>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="apptName">Full Name *</label>
+                            <input type="text" id="apptName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apptPhone">Phone Number *</label>
+                            <input type="tel" id="apptPhone" required>
+                        </div>
+                    </div>
+                    
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="apptDate">Preferred Date *</label>
+                            <input type="date" id="apptDate" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="apptTime">Preferred Time *</label>
+                            <select id="apptTime" required>
+                                <option value="">Select Time</option>
+                                <option value="9am">9:00 AM</option>
+                                <option value="10am">10:00 AM</option>
+                                <option value="11am">11:00 AM</option>
+                                <option value="1pm">1:00 PM</option>
+                                <option value="2pm">2:00 PM</option>
+                                <option value="3pm">3:00 PM</option>
+                                <option value="4pm">4:00 PM</option>
+                                <option value="5pm">5:00 PM</option>
+                                <option value="6pm">6:00 PM</option>
+                                <option value="7pm">7:00 PM</option>
+                            </select>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="apptReason">Reason for Appointment *</label>
+                        <textarea id="apptReason" required placeholder="Please describe the reason for your appointment..."></textarea>
+                    </div>
+                    
+                    <button type="submit" class="cta-button">
+                        <i class="fas fa-calendar-check"></i> Book Appointment
+                    </button>
+                </form>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" style="background: rgba(66, 165, 245, 0.8);">
+            <div class="section-header">
+                <h2>Contact Us</h2>
+                <p>Reach out to us for any inquiries or assistance</p>
+            </div>
+            
+            <div class="card" style="max-width: 800px; margin: 0 auto;">
+                <div class="form-row">
+                    <div class="form-group" style="flex: 1;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">Our Information</h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <span>Highfields, Western Triangle, Harare</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-phone-alt"></i>
+                                <span>+263 779242953</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-envelope"></i>
+                                <span>simedpharmacy@gmail.com</span>
+                            </div>
+                            <div class="contact-item">
+                                <i class="fas fa-clock"></i>
+                                <span>Everyday: 8am - 8pm</span>
+                            </div>
+                        </div>
+                        
+                        <div style="margin-top: 2rem;">
+                            <a href="https://wa.me/263779242953" class="cta-button" target="_blank" style="display: inline-flex;">
+                                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="form-group" style="flex: 1;">
+                        <h3 style="color: var(--primary-color); margin-bottom: 1.5rem;">Send a Message</h3>
+                        <form>
+                            <div class="form-group">
+                                <input type="text" placeholder="Your Name" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="email" placeholder="Your Email" required>
+                            </div>
+                            <div class="form-group">
+                                <input type="tel" placeholder="Your Phone">
+                            </div>
+                            <div class="form-group">
+                                <textarea placeholder="Your Message" rows="4" required></textarea>
+                            </div>
+                            <button type="submit" class="cta-button">
+                                <i class="fas fa-paper-plane"></i> Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Chatbot Modal -->
+        <div class="chatbot-btn" id="chatbotBtn">
+            <i class="fas fa-comment-medical"></i>
+        </div>
+        
+        <div class="chatbot-modal" id="chatbotModal">
+            <div class="chatbot-header">
+                <h3><i class="fas fa-robot"></i> Pharmacy Assistant</h3>
+                <button class="close-chatbot">&times;</button>
+            </div>
+            
+            <div class="chatbot-body" id="chatbotBody">
+                <div class="chatbot-message">
+                    <p>Hello! I'm your Pharmacy Assistant. How can I help you today?</p>
+                </div>
+                
+                <div class="chatbot-message">
+                    <p>Here are some common questions:</p>
+                    <ul style="margin-left: 20px; margin-top: 5px;">
+                        <li>What are your operating hours?</li>
+                        <li>Do you deliver medications?</li>
+                        <li>Can I refill my prescription online?</li>
+                        <li>What vaccines do you offer?</li>
+                        <li>Do you accept my medical aid?</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="chatbot-input">
+                <input type="text" id="chatbotInput" placeholder="Ask a question...">
+                <button id="sendChatbotMessage"><i class="fas fa-paper-plane"></i></button>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-grid">
+            <div class="footer-column">
+                <h3>SIMED Pharmacy</h3>
+                <p>Your trusted healthcare partner providing quality medications, health products, and personalized pharmaceutical services.</p>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#"><i class="fab fa-twitter"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                    <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#catalogue">Catalogue</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#prescription">Prescription</a></li>
+                    <li><a href="#appointments">Appointments</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Services</h3>
+                <ul>
+                    <li><a href="#">Prescription Filling</a></li>
+                    <li><a href="#">Health Screenings</a></li>
+                    <li><a href="#">Vaccinations</a></li>
+                    <li><a href="#">Medication Therapy Management</a></li>
+                    <li><a href="#">Home Delivery</a></li>
+                    <li><a href="#">Compounding Services</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-column">
+                <h3>Contact Info</h3>
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Highfields, Western Triangle, Harare</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone-alt"></i>
+                        <span>+263 779242953</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <span>simedpharmacy@gmail.com</span>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Everyday: 8am - 8pm</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>&copy; 2025 SIMED Pharmacy. All rights reserved. | Designed with <i class="fas fa-heart" style="color: var(--accent-color);"></i> for your health</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
