@@ -33,32 +33,27 @@
             background-color: var(--background-color);
         }
 
-        /* Background Image */
-        .background-overlay {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background-image: url('https://i.imgur.com/oENXr2k.jpeg');
+        /* Header with Background Image */
+        header {
+            background: linear-gradient(rgba(13, 71, 161, 0.8), rgba(13, 71, 161, 0.9)), 
+                        url('https://i.imgur.com/oENXr2k.jpeg');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
-            z-index: -1;
-        }
-
-        /* Header Styles */
-        header {
-            background: rgba(13, 71, 161, 0.95);
             color: var(--light-text);
             padding: 1rem 2rem;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
+            position: relative;
             box-shadow: var(--shadow);
+        }
+
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
             display: flex;
             justify-content: space-between;
             align-items: center;
+            position: relative;
+            z-index: 2;
         }
 
         .logo-container {
@@ -218,7 +213,7 @@
 
         /* Hero Section */
         .hero {
-            min-height: 80vh;
+            min-height: 70vh;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -226,17 +221,7 @@
             color: var(--light-text);
             padding: 2rem;
             position: relative;
-        }
-
-        .hero::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(13, 71, 161, 0.7);
-            z-index: -1;
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
         }
 
         .hero-content {
@@ -247,13 +232,12 @@
         .hero h1 {
             font-size: 3.5rem;
             margin-bottom: 1.5rem;
-            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
         }
 
         .hero p {
             font-size: 1.3rem;
             margin-bottom: 2.5rem;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
         }
 
         .hero-buttons {
@@ -292,7 +276,6 @@
             border-radius: 12px;
             padding: 2.5rem;
             box-shadow: var(--shadow);
-            backdrop-filter: blur(10px);
         }
 
         /* Form Styles */
@@ -370,7 +353,6 @@
             text-align: center;
             box-shadow: var(--shadow);
             transition: var(--transition);
-            backdrop-filter: blur(10px);
         }
 
         .service-card:hover {
@@ -419,7 +401,7 @@
 
         /* Footer */
         footer {
-            background: rgba(13, 71, 161, 0.95);
+            background: var(--primary-color);
             color: var(--light-text);
             padding: 3rem 2rem 1rem;
         }
@@ -429,6 +411,9 @@
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 2rem;
             margin-bottom: 2rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .footer-column h3 {
@@ -484,6 +469,9 @@
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             color: #ccc;
             font-size: 0.9rem;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         /* Chatbot */
@@ -583,14 +571,13 @@
         }
 
         @media (max-width: 768px) {
-            header {
+            .header-content {
                 flex-direction: column;
-                padding: 1rem;
+                gap: 1rem;
             }
             
             nav {
                 width: 100%;
-                margin-top: 1rem;
                 flex-direction: column;
                 gap: 1rem;
             }
@@ -654,139 +641,137 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <div class="background-overlay"></div>
-
     <header>
-        <div class="logo-container">
-            <div class="logo">
-                <i class="fas fa-clinic-medical"></i>
-                SIMED PHARMACY
+        <div class="header-content">
+            <div class="logo-container">
+                <div class="logo">
+                    <i class="fas fa-clinic-medical"></i>
+                    SIMED PHARMACY
+                </div>
             </div>
-        </div>
-        
-        <nav>
-            <ul class="nav-menu">
-                <li>
-                    <a href="#home">Home</a>
-                </li>
-                <li>
-                    <a href="#catalogue">Catalogue <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown">
-                        <div class="dropdown-columns">
-                            <div class="dropdown-column">
-                                <h4>HEALTH BAR</h4>
-                                <ul>
-                                    <li><a href="#">Universal</a></li>
-                                    <li><a href="#">Muscle Junkie</a></li>
-                                    <li><a href="#">Weight Management</a></li>
-                                    <li><a href="#">Healthy Foods</a></li>
-                                    <li><a href="#">FORTUNA</a></li>
-                                    <li><a href="#">REHABILITATION</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown-column">
-                                <h4>BABY BAR</h4>
-                                <ul>
-                                    <li><a href="#">Tommee Tippee</a></li>
-                                    <li><a href="#">Avent</a></li>
-                                    <li><a href="#">Nuby</a></li>
-                                    <li><a href="#">Nuk</a></li>
-                                    <li><a href="#">Toys</a></li>
-                                    <li><a href="#">For Mom</a></li>
-                                    <li><a href="#">Diapers & Wipes</a></li>
-                                    <li><a href="#">Food & Formula</a></li>
-                                    <li><a href="#">Baby Skin Care</a></li>
-                                    <li><a href="#">Baby Wear</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown-column">
-                                <h4>BEAUTY BAR</h4>
-                                <ul>
-                                    <li><a href="#">Gift-sets</a></li>
-                                    <li><a href="#">Cosmetic Cases/Bags</a></li>
-                                    <li><a href="#">General Beauty Bar</a></li>
-                                    <li><a href="#">Make-up</a></li>
-                                    <li><a href="#">Zaron</a></li>
-                                    <li><a href="#">Black Opal</a></li>
-                                    <li><a href="#">Revlon</a></li>
-                                    <li><a href="#">Neutrogena</a></li>
-                                    <li><a href="#">Ponds & Dermafix</a></li>
-                                    <li><a href="#">Cetaphil & Celltone</a></li>
-                                    <li><a href="#">The Ordinary/Lanbena</a></li>
-                                    <li><a href="#">DR RASHEL</a></li>
-                                    <li><a href="#">Rooibos</a></li>
-                                    <li><a href="#">Portia M</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown-column">
-                                <h4>PERSONAL CARE</h4>
-                                <ul>
-                                    <li><a href="#">Bath Care</a></li>
-                                    <li><a href="#">Eye Care</a></li>
-                                    <li><a href="#">Body Care</a></li>
-                                    <li><a href="#">Lip Care</a></li>
-                                    <li><a href="#">Oral Hygiene</a></li>
-                                    <li><a href="#">Hand & Foot Care</a></li>
-                                    <li><a href="#">Sunscreens</a></li>
-                                    <li><a href="#">Sanitary</a></li>
-                                    <li><a href="#">Ear care</a></li>
-                                </ul>
-                            </div>
-                            <div class="dropdown-column">
-                                <h4>OTHER CATEGORIES</h4>
-                                <ul>
-                                    <li><a href="#">FRAGRANCES</a></li>
-                                    <li><a href="#">MEN'S GROOMING</a></li>
-                                    <li><a href="#">OVER THE COUNTER</a></li>
-                                    <li><a href="#">Food & Services</a></li>
-                                    <!-- Added OTC items -->
-                                    <li><a href="#">Baby Oil</a></li>
-                                    <li><a href="#">Cotton</a></li>
-                                    <li><a href="#">Holy Oil</a></li>
-                                    <li><a href="#">Coconut Oil</a></li>
-                                    <li><a href="#">Olive Oil</a></li>
-                                    <li><a href="#">OTC Drugs</a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#services">Services <i class="fas fa-chevron-down"></i></a>
-                    <div class="dropdown">
-                        <div class="dropdown-column">
-                            <h4>FOOD & SERVICES</h4>
-                            <ul>
-                                <li><a href="#">Deliveries</a></li>
-                                <li><a href="#">Pack my parcel</a></li>
-                                <li><a href="#">Share the warmth</a></li>
-                                <li><a href="#">Piercing</a></li>
-                                <li><a href="#">Body Mass Index</a></li>
-                                <li><a href="#">Prescription</a></li>
-                                <li><a href="#">Medical Aids Accepted</a></li>
-                                <!-- Removed The Booties Black Card -->
-                                <li><a href="#">Front Shop</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </li>
-                <li>
-                    <a href="#prescription">Prescription</a>
-                </li>
-                <li>
-                    <a href="#appointments">Appointments</a>
-                </li>
-                <li>
-                    <a href="#contact">Contact</a>
-                </li>
-            </ul>
             
-            <div class="cta-buttons">
-                <a href="#appointments" class="cta-button">
-                    <i class="fas fa-calendar-check"></i> SIMED Appointments
-                </a>
-            </div>
-        </nav>
+            <nav>
+                <ul class="nav-menu">
+                    <li>
+                        <a href="#home">Home</a>
+                    </li>
+                    <li>
+                        <a href="#catalogue">Catalogue <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown">
+                            <div class="dropdown-columns">
+                                <div class="dropdown-column">
+                                    <h4>HEALTH BAR</h4>
+                                    <ul>
+                                        <li><a href="#">Universal</a></li>
+                                        <li><a href="#">Muscle Junkie</a></li>
+                                        <li><a href="#">Weight Management</a></li>
+                                        <li><a href="#">Healthy Foods</a></li>
+                                        <li><a href="#">FORTUNA</a></li>
+                                        <li><a href="#">REHABILITATION</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>BABY BAR</h4>
+                                    <ul>
+                                        <li><a href="#">Tommee Tippee</a></li>
+                                        <li><a href="#">Avent</a></li>
+                                        <li><a href="#">Nuby</a></li>
+                                        <li><a href="#">Nuk</a></li>
+                                        <li><a href="#">Toys</a></li>
+                                        <li><a href="#">For Mom</a></li>
+                                        <li><a href="#">Diapers & Wipes</a></li>
+                                        <li><a href="#">Food & Formula</a></li>
+                                        <li><a href="#">Baby Skin Care</a></li>
+                                        <li><a href="#">Baby Wear</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>BEAUTY BAR</h4>
+                                    <ul>
+                                        <li><a href="#">Gift-sets</a></li>
+                                        <li><a href="#">Cosmetic Cases/Bags</a></li>
+                                        <li><a href="#">General Beauty Bar</a></li>
+                                        <li><a href="#">Make-up</a></li>
+                                        <li><a href="#">Zaron</a></li>
+                                        <li><a href="#">Black Opal</a></li>
+                                        <li><a href="#">Revlon</a></li>
+                                        <li><a href="#">Neutrogena</a></li>
+                                        <li><a href="#">Ponds & Dermafix</a></li>
+                                        <li><a href="#">Cetaphil & Celltone</a></li>
+                                        <li><a href="#">The Ordinary/Lanbena</a></li>
+                                        <li><a href="#">DR RASHEL</a></li>
+                                        <li><a href="#">Rooibos</a></li>
+                                        <li><a href="#">Portia M</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>PERSONAL CARE</h4>
+                                    <ul>
+                                        <li><a href="#">Bath Care</a></li>
+                                        <li><a href="#">Eye Care</a></li>
+                                        <li><a href="#">Body Care</a></li>
+                                        <li><a href="#">Lip Care</a></li>
+                                        <li><a href="#">Oral Hygiene</a></li>
+                                        <li><a href="#">Hand & Foot Care</a></li>
+                                        <li><a href="#">Sunscreens</a></li>
+                                        <li><a href="#">Sanitary</a></li>
+                                        <li><a href="#">Ear care</a></li>
+                                    </ul>
+                                </div>
+                                <div class="dropdown-column">
+                                    <h4>OTHER CATEGORIES</h4>
+                                    <ul>
+                                        <li><a href="#">FRAGRANCES</a></li>
+                                        <li><a href="#">MEN'S GROOMING</a></li>
+                                        <li><a href="#">OVER THE COUNTER</a></li>
+                                        <li><a href="#">Food & Services</a></li>
+                                        <li><a href="#">Baby Oil</a></li>
+                                        <li><a href="#">Cotton</a></li>
+                                        <li><a href="#">Holy Oil</a></li>
+                                        <li><a href="#">Coconut Oil</a></li>
+                                        <li><a href="#">Olive Oil</a></li>
+                                        <li><a href="#">OTC Drugs</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#services">Services <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown">
+                            <div class="dropdown-column">
+                                <h4>FOOD & SERVICES</h4>
+                                <ul>
+                                    <li><a href="#">Deliveries</a></li>
+                                    <li><a href="#">Pack my parcel</a></li>
+                                    <li><a href="#">Share the warmth</a></li>
+                                    <li><a href="#">Piercing</a></li>
+                                    <li><a href="#">Body Mass Index</a></li>
+                                    <li><a href="#">Prescription</a></li>
+                                    <li><a href="#">Medical Aids Accepted</a></li>
+                                    <li><a href="#">Front Shop</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <a href="#prescription">Prescription</a>
+                    </li>
+                    <li>
+                        <a href="#appointments">Appointments</a>
+                    </li>
+                    <li>
+                        <a href="#contact">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="cta-buttons">
+                    <a href="#appointments" class="cta-button">
+                        <i class="fas fa-calendar-check"></i> SIMED Appointments
+                    </a>
+                </div>
+            </nav>
+        </div>
     </header>
 
     <main>
